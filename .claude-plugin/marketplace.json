@@ -1,0 +1,14 @@
+{
+  "name": "nymwell",
+  "description": "Nymwell plugins for Claude Code",
+  "owner": {
+    "name": "Nymwell"
+  },
+  "plugins": [
+    {
+      "name": "nymwell",
+      "source": "./plugins/nymwell",
+      "description": "Find and check domain names: availability, first-year and renewal prices, and any domain's public records."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+name: publish
+
+# Push a tag such as cli-v0.1.1 to publish cli/ to npm. Uses npm trusted
+# publishing (OIDC), so no npm token is stored; the "npm" environment can
+# require a reviewer before the job runs.
+on:
+  push:
+    tags: ['cli-v*']
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - name: Tag matches the package version
+        working-directory: cli
+        run: test "cli-v$(node -p 'require("./package.json").version')" = "$GITHUB_REF_NAME"
+      - name: Publish with provenance
+        working-directory: cli
+        run: npm publish --provenance --access public

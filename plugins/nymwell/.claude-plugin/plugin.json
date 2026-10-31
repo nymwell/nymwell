@@ -1,0 +1,14 @@
+{
+  "name": "nymwell",
+  "displayName": "Nymwell",
+  "version": "0.1.0",
+  "description": "Find and check domain names from Claude Code: availability with first-year and renewal prices, hundreds of names at once, and any domain's public records. Uses the nymwell CLI; buying hands the person a payment link unless they set an agent key.",
+  "author": {
+    "name": "Nymwell",
+    "url": "https://nymwell.com/"
+  },
+  "homepage": "https://nymwell.com/en/developers/",
+  "repository": "https://github.com/nymwell/nymwell",
+  "license": "MIT",
+  "keywords": ["domains", "domain-registrar", "domain-availability", "dns", "rdap", "whois"]
+}
