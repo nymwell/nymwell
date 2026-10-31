@@ -22,6 +22,8 @@ jobs:
         run: |
           node --check cli/bin/nymwell.mjs
           node cli/bin/nymwell.mjs --help
+      - name: The CLI reports its package version
+        run: grep -q "const VERSION = '$(node -p 'require("./cli/package.json").version')';" cli/bin/nymwell.mjs
       - name: Manifests are valid JSON
         run: |
           for f in .claude-plugin/marketplace.json plugins/nymwell/.claude-plugin/plugin.json cli/package.json; do

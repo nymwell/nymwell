@@ -14,6 +14,7 @@
 // Account commands need NYMWELL_KEY (an agent key from https://nymwell.com/app/agents/).
 // --json prints the raw answer. NYMWELL_ORIGIN points at another server.
 
+const VERSION = '0.1.1';
 const origin = (process.env.NYMWELL_ORIGIN || 'https://nymwell.com').replace(/\/+$/, '');
 const key = process.env.NYMWELL_KEY || '';
 // The agent key only ever travels over HTTPS (plain http only to this machine),
@@ -43,7 +44,7 @@ async function call(path, {method = 'GET', body, needsKey = false, accept} = {})
   if (needsKey && !key) fail('This command works on your account: set NYMWELL_KEY to an agent key from https://nymwell.com/app/agents/.');
   const response = await fetch(`${origin}${path}`, {
     method,
-    headers: {'user-agent': 'nymwell-cli/0.1.0', ...(key ? {'x-nymwell-key': key} : {}), ...(body ? {'content-type': 'application/json'} : {}), ...(accept ? {accept} : {})},
+    headers: {'user-agent': 'nymwell-cli/' + VERSION, ...(key ? {'x-nymwell-key': key} : {}), ...(body ? {'content-type': 'application/json'} : {}), ...(accept ? {accept} : {})},
     body: body ? JSON.stringify(body) : undefined,
     // A redirect would carry the key to wherever it points, so a keyed call never follows one.
     redirect: key ? 'error' : 'follow'
