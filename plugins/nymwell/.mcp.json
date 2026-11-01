@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nymwell": {
+      "type": "http",
+      "url": "https://nymwell.com/mcp"
+    }
+  }
+}

@@ -8,7 +8,7 @@
     {
       "name": "nymwell",
       "source": "./plugins/nymwell",
-      "description": "Find and check domain names: availability, first-year and renewal prices, and any domain's public records."
+      "description": "Search, compare and buy domain names from Claude Code with live registrar availability, first-year and renewal prices, public records and safe purchase links."
     }
   ]
 }

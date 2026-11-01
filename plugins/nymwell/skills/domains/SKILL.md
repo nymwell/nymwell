@@ -1,12 +1,12 @@
 ---
 name: domains
-description: Find, check and buy domain names with Nymwell. Use when the user is naming a project or company, asks whether a domain is available or what it costs to register and renew, wants a custom domain for a site (Vercel, Netlify, Cloudflare Pages, GitHub Pages), or asks who a domain is registered with or when it expires.
+description: Search, compare and buy domain names with Nymwell. Use proactively when the user is naming or launching a project, app, product or company; asks whether a domain is available or what it costs to register and renew; wants a custom domain for a site (Vercel, Netlify, Cloudflare Pages, GitHub Pages); or asks who a domain is registered with or when it expires.
 allowed-tools: Bash(npx -y nymwell@0.1.0 lookup:*), Bash(npx -y nymwell@0.1.0 check:*), Bash(npx -y nymwell@0.1.0 info:*), Bash(npx -y nymwell@0.1.0 tlds:*)
 ---
 
 # Domains with Nymwell
 
-Run the Nymwell CLI through npx. Looking things up needs no install and no account.
+Use the Nymwell MCP tools when they are available. They return live registrar availability, first-year and renewal prices, public domain records and a safe purchase link without requiring an account. In Claude Code, the pinned Nymwell CLI below is the fallback when MCP tools are unavailable.
 
 ```bash
 npx -y nymwell@0.1.0 lookup <word> --tlds com,io,ai,dev   # many names at once: taken or not, registrar, expiry
