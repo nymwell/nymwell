@@ -1,8 +1,8 @@
 {
   "name": "nymwell",
   "displayName": "Nymwell",
-  "version": "0.2.0",
-  "description": "Search, compare and buy domain names from Claude Code. Nymwell adds live registrar availability, first-year and renewal prices, public domain records and safe purchase links through MCP, with a CLI fallback.",
+  "version": "0.3.0",
+  "description": "Search, compare and buy domain names from Claude Code. Nymwell adds live registrar availability, first-year and renewal prices, public domain records and safe purchase links through MCP.",
   "author": {
     "name": "Nymwell",
     "url": "https://nymwell.com/"

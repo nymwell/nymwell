@@ -1,6 +1,6 @@
 # Nymwell for Claude
 
-Nymwell helps Claude find a domain for the project you are building, check whether an exact name can be registered, compare the first-term and renewal price, and inspect public registration, DNS, email and HTTPS records. The plugin connects Claude to Nymwell's public MCP server and also teaches Claude Code to use the pinned `nymwell` command-line tool as a fallback.
+Nymwell helps Claude find a domain for the project you are building, check whether an exact name can be registered, compare the first-term and renewal price, and inspect public registration, DNS, email and HTTPS records. The plugin connects Claude to Nymwell's declared MCP server; it does not run shell commands or install software.
 
 Use it when naming or launching an app, product, company or website; connecting a custom domain to a host; comparing domain endings; or checking who operates an existing domain and when it expires.
 
@@ -18,7 +18,7 @@ Public search and lookup need no Nymwell account. By default, the plugin cannot 
 
 Domain queries are sent to Nymwell and its connected registrar to return availability and pricing. Do not put passwords, API secrets, transfer authorization codes or personal contact details in a domain-search field. Nymwell does not expose card numbers to Claude. Learn more in the [privacy notice](https://nymwell.com/en/trust/privacy/) and [agent guide](https://nymwell.com/en/docs/agents/).
 
-When a person separately connects the signed-in account server, Nymwell may read and store the account, registrant contact, domain, DNS, order, support and audit records needed to provide the requested service. Those service records may be retained for longer than 30 days according to their purpose and applicable registry, security, accounting and legal obligations. The plugin is not intended for users under 18. The command-line fallback sends domain requests to the same Nymwell service described here.
+When a person separately connects the signed-in account server, Nymwell may read and store the account, registrant contact, domain, DNS, order, support and audit records needed to provide the requested service. Those service records may be retained for longer than 30 days according to their purpose and applicable registry, security, accounting and legal obligations. The plugin is not intended for users under 18.
 
 ## Support
 
