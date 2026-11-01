@@ -9,6 +9,7 @@
   },
   "homepage": "https://nymwell.com/en/developers/",
   "repository": "https://github.com/nymwell/nymwell",
+  "privacyPolicyUrl": "https://nymwell.com/en/trust/privacy/",
   "license": "MIT",
   "keywords": ["domains", "domain-registrar", "domain-availability", "domain-search", "mcp", "dns", "rdap", "whois"]
 }

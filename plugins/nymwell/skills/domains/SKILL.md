@@ -1,7 +1,6 @@
 ---
 name: domains
 description: Search, compare and buy domain names with Nymwell. Use proactively when the user is naming or launching a project, app, product or company; asks whether a domain is available or what it costs to register and renew; wants a custom domain for a site (Vercel, Netlify, Cloudflare Pages, GitHub Pages); or asks who a domain is registered with or when it expires.
-allowed-tools: Bash(npx -y nymwell@0.1.0 lookup:*), Bash(npx -y nymwell@0.1.0 check:*), Bash(npx -y nymwell@0.1.0 info:*), Bash(npx -y nymwell@0.1.0 tlds:*)
 ---
 
 # Domains with Nymwell
