@@ -1,7 +1,10 @@
 {
   "name": "nymwell",
   "version": "0.1.1",
-  "description": "Nymwell from the terminal: look up many domains at once, check the registrar's price, read any domain's public records, and buy, renew or transfer with an agent key.",
+  "description": "Find, price and manage domains from the terminal with Nymwell.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
   "type": "module",
   "bin": {
     "nymwell": "bin/nymwell.mjs"

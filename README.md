@@ -20,13 +20,13 @@ Without the plugin, Claude Code can run the CLI directly: ask it to use `npx nym
 ## The CLI
 
 ```bash
-npx nymwell lookup yourbrand --tlds all   # up to 500 names: DNS and public registry records
-npx nymwell check yourbrand.com           # the registrar's answer and price, with a buy link
-npx nymwell info example.com              # everything public about one domain
-npx nymwell tlds                          # every ending, with prices
+npx nymwell search yourbrand --tlds com,io  # live availability, price and buy link
+npx nymwell suggest "quiet studio"           # available name ideas
+npx nymwell lookup example.com              # public registration records
+npx nymwell tlds                            # popular endings, prices and rules
 ```
 
-With an agent key from https://nymwell.com/app/agents/ in `NYMWELL_KEY`, the CLI can also quote, buy, renew and transfer, follow orders and read DNS. See [cli/README.md](cli/README.md). No dependencies; Node 18 or later.
+With an agent key from https://nymwell.com/app/agents/ in `NYMWELL_KEY`, the CLI can also create quotes and checkout links, follow orders, and read account domains and DNS. Transfers securely continue in the browser so a transfer code never appears in terminal history. See [cli/README.md](cli/README.md). No dependencies; Node 18 or later.
 
 ## MCP
 
@@ -40,9 +40,9 @@ For assistants that connect to MCP servers (Claude, ChatGPT, Cursor, Codex):
 
 In Claude Code: `claude mcp add --transport http nymwell https://nymwell.com/mcp`. Setup for each assistant: https://nymwell.com/en/docs/mcp/
 
-## How payment is bounded
+## How payment stays safe
 
-An agent can pay only with the card the person saved in the Nymwell console, within limits the person sets (by default US$100 per order and US$500 per 30 days). Only a person can add a card or change the limits. Without a key, or past a limit, the agent gets a payment link to hand to the person. The agent never sees the card number.
+The CLI returns a hosted checkout link. The person reviews the exact domain and price, then pays in the browser; the CLI never sees a card number. Transfer authorization codes also stay out of the terminal and are entered only on Nymwell's signed-in transfer page.
 
 ## Security
 

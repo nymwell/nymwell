@@ -18,10 +18,9 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
-      - name: CLI parses and prints help
-        run: |
-          node --check cli/bin/nymwell.mjs
-          node cli/bin/nymwell.mjs --help
+      - name: Test the CLI end to end
+        working-directory: cli
+        run: npm test
       - name: The CLI reports its package version
         run: grep -q "const VERSION = '$(node -p 'require("./cli/package.json").version')';" cli/bin/nymwell.mjs
       - name: Manifests are valid JSON
